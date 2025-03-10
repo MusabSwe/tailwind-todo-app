@@ -39,7 +39,7 @@ function App() {
           onSubmit={addTodo}
         />
         <div className="space-y-2">
-          {todos.map((todo) => {
+          {todos.sort((a, b) => a.id - b.id).map((todo) => {
             return (
               <TodoItem
                 key={todo.id}
